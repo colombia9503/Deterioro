@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	<h:head>
+		<title>Políticas</title>
+	</h:head>
+	<h:body>
+		<h:form>
+			<div>
+				<h3>Políticas</h3>
+			</div>
+			<div>
+				Policy id: <h:inputText id="policyId" value="#{policy.id}"/>
+			</div>
+			
+			<div>
+				Type: <h:inputText id="policyType" value="#{policy.type}"/>
+			</div>
+			
+			<div>
+				Name: <h:inputText id="policyName" value="#{policy.name}"/>
+			</div>
+			
+			<div>
+				Priority: 
+				<h:selectOneRadio>
+					<f:selectItem itemValue="1" itemLabel="Alta"/>
+					<f:selectItem itemValue="2" itemLabel="Media"/>
+					<f:selectItem itemValue="3" itemLabel="Baja"/>
+				</h:selectOneRadio>
+				<!--<h:selectOneMenu value="#{policy.priority}">
+					getted by the arraylist var
+					<f:selectItems value="#{policy.priorityOptions}"/>
+					item per item
+					<f:selectItem itemValue="1" itemLabel="Alta"/>
+					<f:selectItem itemValue="2" itemLabel="Media"/>
+					<f:selectItem itemValue="3" itemLabel="Baja"/>
+				</h:selectOneMenu> -->
+			</div>
+			
+			<div>
+				Rate: <h:inputText id="rate" value="#{policy.rate}"/>
+			</div>
+			
+			<div>
+				Formula: <h:inputText id="formula" value="#{policy.formula}"/>
+			</div>
+			
+			<div>
+				<h:commandButton value="Submit" action="policy_response"/>
+			</div>
+		</h:form>
+	</h:body>
+</html>
